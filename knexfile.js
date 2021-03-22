@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 
 module.exports = {
   development: {
@@ -26,9 +26,6 @@ module.exports = {
   production: {
     client: "pg",
     connection: process.env.DATABASE_URL,
-    ssl: {
-      rejectUnauthorized: false
-    },
     pool: {
       min: 2,
       max: 10,
