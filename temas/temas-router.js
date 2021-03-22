@@ -56,13 +56,13 @@ router.get("/:id", (req, res) => {
 // });
 
 router.put("/:id", (req, res) => {
-  dbConfig('temas')
+  dbConfig("temas")
     .where({ id: req.params.id })
     .update(req.body)
-    .then(temas => {
-      res.status(200).json(temas  )
-    })
-})
+    .then((temas) => {
+      res.status(200).json(temas);
+    });
+});
 
 router.delete("/:id", (req, res) => {
   const { id } = req.params;

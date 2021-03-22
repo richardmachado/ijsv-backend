@@ -11,7 +11,6 @@ exports.up = async function (knex) {
     table.string("body2", 10000);
     table.string("body3", 10000);
   });
-
 };
 
 exports.down = async function (knex) {

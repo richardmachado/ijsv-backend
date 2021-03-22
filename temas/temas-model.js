@@ -13,9 +13,7 @@ function gettemas() {
 }
 
 function findtemasById(id) {
-  return db("temas")
-    .where({ id })
-
+  return db("temas").where({ id });
 }
 
 function updatetemas(changes, id) {
