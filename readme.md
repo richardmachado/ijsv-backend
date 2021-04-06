@@ -18,6 +18,7 @@ development: { client: 'sqlite3', connection: { filename: './data/car-dealer.db3
 Postgres\* production: { client: 'pg', connection: process.env.DATABASE_URL, pool: { min: 2, max: 10 }, migrations: { directory:"./migrations" }, seeds: { directory:"./seeds" } }
 
 knex migrate:make \_create_user_table (xxx = name of table)
+
 exports.up = async function(knex) { await knex.schema.createTable("users", (table) => { table.increments("id").unique()… }) };
 
 exports.down = async function(knex) {

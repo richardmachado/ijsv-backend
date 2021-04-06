@@ -4,7 +4,7 @@ exports.up = async function (knex) {
     table.string("username").unique().notNullable();
     table.string("password").notNullable();
   });
-  await knex.schema.createTable("temas", (table) => {
+  await knex.schema.createTable("temas", (table ) => {
     table.increments();
     table.string("title", 128).notNullable();
     table.string("body1", 10000).notNullable();
