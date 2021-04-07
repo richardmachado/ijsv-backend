@@ -13,8 +13,5 @@ server.use(express.json());
 server.use("/api/auth", loginRouter);
 server.use("/api/temas", temasRouter);
 
-server.get("/", (req, res) => {
-  res.send("server's here");
-});
 
 module.exports = server;
