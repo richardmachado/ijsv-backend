@@ -5,13 +5,9 @@ exports.seed = function (knex) {
     .then(function () {
       // Inserts seed entries
       return knex("temas").insert([
+
         {
           id: 1,
-          title: "Frutos Del Nuevo NACIMIENTO ‼️",
-          body1: "Que es nacer de nuevo",
-        },
-        {
-          id: 2,
           title: "Lo que creemos en IJSV",
           body1:
             "Creemos que la Biblia es la revelación escrita de Dios, completa y suficiente en todos los aspectos. Creemos que Las Escrituras son “exhaladas por Dios” y por lo tanto completamente autoritarias en y de sí mismas; no basan su autoridad en ninguna iglesia, consejo, o credo, sino que son autoritarias simplemente porque son la Palabra de Dios. (2 Tim.3:15-17)Creemos que Dios es uno, eterno, constante, e inmutable. Creemos que Dios es el creador de todo lo que existe en el cielo y en la tierra. El Dios que se describe en la Biblia es único; Él no es semejante a cualquier persona o cosa en todo el universo. Dios tiene todo el poder, todo el conocimiento, toda la sabiduría, y a Él se le debe toda la gloria, honor y alabanza. Todo lo que pasa o va a pasar está en el decreto de Dios. Todas las cosas, al final, dan la gloria a Dios.Creemos que la Biblia enseña que hay solamente un solo Dios, el cual subsiste en tres personas: el Padre, el Hijo, y el Espíritu Santo. Cada persona es completa y totalmente Dios. El Padre, el Hijo, y el Espíritu Santo han existido eternamente en la relación descrita por el término “Trinidad”. Creemos que el hombre fue creado a la imagen de Dios. El hombre se ha rebelado contra su Creador, y cayó en pecado.",
