@@ -5,7 +5,6 @@ exports.seed = function (knex) {
     .then(function () {
       // Inserts seed entries
       return knex("temas").insert([
-
         {
           id: 1,
           title: "Lo que creemos en IJSV",
