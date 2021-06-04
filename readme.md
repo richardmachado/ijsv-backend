@@ -15,11 +15,17 @@ open knexfile.js and configure the connection like this --
 
 ```updated to correct production```
 
-development: { client: 'sqlite3', connection: { filename: './data/car-dealer.db3' <—— filename here }, useNullAsDefault: true },
+development: { 
+  client: 'sqlite3', 
+  connection: 
+  { filename: './data/car-dealer.db3' <—— filename here }, 
+  useNullAsDefault: true 
+  },
 
-Postgres\* production: { client: 'pg', 
+Postgres\* production: { 
+  client: 'pg', 
 ~~connection: process.env.DATABASE_URL,~~
-connection: ``${process.env.DATABASE_URL}?ssl=no-verify``, 
+connection: `${process.env.DATABASE_URL}?ssl=no-verify`, <--with backticks 
 pool: { min: 2, max: 10 }, 
 migrations: 
     { directory:"./migrations" }, 
@@ -59,11 +65,19 @@ server.listen(PORT, () => { console.log(\n=== Server listening on port ${PORT} =
 
 -create api folder - add server.js In server.js add
 
-const express = require('express'); const cors = require('cors'); const helmet = require('helmet'); const usersRouter = require('./users/users-router') const studentsRouter = require('./students/student-router') const loginRouter = require('./auth/login') const projectRouter = require('./projects/projects-router')
+const express = require('express'); 
+const cors = require('cors'); 
+const helmet = require('helmet'); 
+const usersRouter = require('./users/users-router') 
+const studentsRouter = require('./students/student-router') 
+const loginRouter = require('./auth/login') 
+const projectRouter = require('./projects/projects-router')
 
 const server = express();
 
-server.use(helmet()); server.use(cors()); server.use(express.json());
+server.use(helmet()); 
+server.use(cors()); 
+server.use(express.json());
 
 server.use('/api/auth', loginRouter);
 
