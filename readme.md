@@ -13,9 +13,18 @@ Add a data folder so the next step goes through
 
 open knexfile.js and configure the connection like this --
 
+```updated to correct production```
+
 development: { client: 'sqlite3', connection: { filename: './data/car-dealer.db3' <—— filename here }, useNullAsDefault: true },
 
-Postgres\* production: { client: 'pg', connection: process.env.DATABASE_URL, pool: { min: 2, max: 10 }, migrations: { directory:"./migrations" }, seeds: { directory:"./seeds" } }
+Postgres\* production: { client: 'pg', 
+~~ connection: process.env.DATABASE_URL, ~~
+connection: `${process.env.DATABASE_URL}?ssl=no-verify`, 
+pool: { min: 2, max: 10 }, 
+migrations: 
+    { directory:"./migrations" }, 
+  seeds: 
+    { directory:"./seeds" } }
 
 knex migrate:make \_create_user_table (xxx = name of table)
 
